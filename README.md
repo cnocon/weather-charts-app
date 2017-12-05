@@ -32,6 +32,8 @@ User submits form which calls action creator (and passes city), we then craft ur
 
 ![redux promise as middleware](https://www.dropbox.com/s/0t63yl5g8uwy7ad/Screenshot%202017-12-05%2011.45.44.png?raw=1)
 
+> **NEVER mutate the current state in your reducer; you want to return a brand new object. so instead of doing something like `return state.push(action.payload.data)`, which mutates the original state array, you want to use a method that creates a new object, like `.concat`, which takes two arrays and creates a new one, like `return state.concat([action.payload.data]);`**
+
 ---
 
 
