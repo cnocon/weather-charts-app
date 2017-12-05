@@ -1,4 +1,16 @@
-# ReduxSimpleStarter
+# Weather Charts App
+based on fork of https://github.com/StephenGrider/ReduxSimpleStarter.git
+What we're building
+![](https://www.dropbox.com/s/tkxfwms3q1fuldy/Screenshot%202017-12-05%2010.23.00.png?raw=1)
+
+First container: search bar (it's a container because it needs to talk to redux, bc it's input determines what shows on hte page, so there's events)
+
+
+
+
+---
+
+# Boilerplate: ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
