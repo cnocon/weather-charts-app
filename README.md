@@ -36,9 +36,29 @@ User submits form which calls action creator (and passes city), we then craft ur
 
 ---
 
+# For containers
+Example: the WeatherList container (containers/weather_list)
+```js
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+export class WeatherList extends Component {
+  // ...
+}
+
+function mapStateToProps({weather}) { // ES6 equivalent to function mapStateToProps(state) {
+  return { weather }; // ES6 equivalent to return { weather: state.weather };
+}
+
+export default connect (mapStateToProps)(WeatherList);
+```
 
 ---
+
+# Mapping props to a render helper
+https://www.udemy.com/react-redux/learn/v4/t/lecture/4284608?start=0
+
+![Redux State diagram](https://www.dropbox.com/s/92ozsxpcgkwbhzy/Screenshot%202017-12-05%2012.48.23.png?raw=1)
 
 # Boilerplate: ReduxSimpleStarter
 
