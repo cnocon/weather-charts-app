@@ -24,6 +24,15 @@ we'll use axios module to simplify making the ajax request (so we don't have to 
 `npm install --save axios`
 
 
+# Adding a reducer
+User submits form which calls action creator (and passes city), we then craft url w/city, and make an ajax request w/axios. Axios returns a promise. A promise is a data structure that doesn't yet contain the request data 
+
+**_it's important to note that we're returning teh promise in the payload key in the fetchWeather action creator (see actions/index.js)_**
+> **HERE'S WHERE MIDDLEWARE IS FANTASTIC: redux promise it forces the action return statement to wait until the promise from the ajax request (well, the axios call) finalizes into an object - so the payload is an actual object and exists - SUPER HELPFUL.**
+
+![redux promise as middleware](https://www.dropbox.com/s/0t63yl5g8uwy7ad/Screenshot%202017-12-05%2011.45.44.png?raw=1)
+
+---
 
 
 
