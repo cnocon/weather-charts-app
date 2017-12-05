@@ -11,7 +11,19 @@ Middlewares take the action, and depending on the action type or any other facto
 
 For helping w/ajax requests:
 `npm install --save redux-promise`
-Hook it up via src/index.js
+
+Hook it up via src/index.js: 
+`import ReduxPromise from 'redux-promise';`
+`const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);`
+
+# Creating the ajax request
+Our app state holds all the data of our application, including the weather data. We only change our application state through our reducers and actions, so to load our weather data, we need to dispatch an action (call an action creator) that is responsible for making that ajax request.
+// action creators always have to return action with type and optionally a payload
+
+we'll use axios module to simplify making the ajax request (so we don't have to include the entire jquery library)
+`npm install --save axios`
+
+
 
 
 
