@@ -5,6 +5,13 @@ What we're building
 
 First container: search bar (it's a container because it needs to talk to redux, bc it's input determines what shows on hte page, so there's events)
 
+# AJAX w/Redux
+![middleware chart](https://www.dropbox.com/s/43jhpcjb7uia6co/Screenshot%202017-12-05%2010.53.54.png?raw=1)
+Middlewares take the action, and depending on the action type or any other factor, the middleware can choose to let the action pass through, manipulate it, stop it all together whatever BEFORE they reach a reducer. They're kind of like gatekeepers.
+
+For helping w/ajax requests:
+`npm install --save redux-promise`
+Hook it up via src/index.js
 
 
 

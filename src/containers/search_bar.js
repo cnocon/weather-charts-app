@@ -5,16 +5,21 @@ export default class SearchBar extends Component {
     this.state = {
       term: ''
     }
-    // this.onInputChange = this.onInputChange.bind(this); I used an arrow function instead
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
   }
   onInputChange(event) {
-    console.log(this.state.term);
     this.setState({ term: event.target.value });
+  }
+  onFormSubmit(event) {
+    event.preventDefault();
   }
   render() {
     return (
-      <form className="input-group">
-        <input placeholder="Search for a City" value={this.state.term} onChange={(event) => { this.onInputChange(event)} }/>
+      <form className="input-group" onSubmit={this.onFormSubmit}>
+        <input placeholder="Search for a City"
+          value={this.state.term}
+          onChange={this.onInputChange} />
         <span className="input-group-button">
           <button className="btn btn-primary btn-sm" type="submit">Search</button>
         </span>
