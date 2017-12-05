@@ -22,13 +22,11 @@ export class SearchBar extends Component {
   }
   render() {
     return (
-      <form className="input-group" onSubmit={this.onFormSubmit}>
-        <input placeholder="Search for a City"
+      <form className="input-group col-md-8" onSubmit={this.onFormSubmit}>
+        <input placeholder="Search for a City" className="col-9"
           value={this.state.term}
           onChange={this.onInputChange} />
-        <span className="input-group-button">
-          <button className="btn btn-primary btn-sm" type="submit">Search</button>
-        </span>
+        <button className="btn btn-primary col-3" type="submit">Search</button>
       </form>
     )
   }

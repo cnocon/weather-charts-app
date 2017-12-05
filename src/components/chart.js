@@ -11,10 +11,10 @@ export default (props) => {
   return (
     <div>
       <Sparklines height={120} width={180} data={props.data}>
-        <SparklinesLine color={props.color}/>
+        <SparklinesLine style={{ stroke: `${props.color}`, fill: `${props.color}`, fillOpacity: "0.45" }}/>
         <SparklinesReferenceLine type="avg"/>
       </Sparklines>
-      <p>Avg. <b className="badge badge-secondary">{average(props.data)}{props.units}</b></p>
+      <p className="more">Avg. {average(props.data)}{props.units}</p>
     </div>
   );
 }

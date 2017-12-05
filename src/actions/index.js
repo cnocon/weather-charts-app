@@ -1,3 +1,4 @@
+// axios docs https://www.npmjs.com/package/axios
 import axios from 'axios';
 
 // api key for https://openweathermap.org/
@@ -16,4 +17,4 @@ export function fetchWeather(city) {
   };
 }
 
-// axios docs https://www.npmjs.com/package/axios
+

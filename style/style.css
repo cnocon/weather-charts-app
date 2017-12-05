@@ -1,0 +1,71 @@
+
+.display-4 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.row {
+  margin-top: 2rem;
+}
+
+.table thead {
+  background: #fdfdfe;
+}
+
+.table thead th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  width: 26%;
+}
+
+.table thead th:first-child {
+  width: 22%;
+}
+
+.table tbody th {
+  vertical-align: middle;
+  text-align: center;
+  width: 22%;
+}
+
+.table tbody td {
+  text-align: center;
+  vertical-align: bottom;
+  width: 26%;
+  min-width: 120px;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+p.more {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+
+@media screen and (min-width: 700px) {
+  .table tbody th,
+  .table thead th {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .table tbody th,
+  .table thead th {
+    font-size: 1.25rem;
+  }
+
+  p.more {
+    font-size: 1rem;
+  }
+}
