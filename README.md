@@ -111,17 +111,14 @@ export default GoogleMap;
 > ---
 
 
+# REVIEW
 
+* REDUX-PROMISE IS AN AWESOME PACKAGE TO INCLUDE - it helped simplify waiting for the ajax request promise to return the object.
+* Never mutate state directly in reducers; instead return a new object to take its place
+* sparklines library (react-sparklines)
+* react-google-maps for google maps WAYYY simplified bc otherwise it'd be tougher to integrate
 
-
-
-
-
-
-
-
-
-
+---
 
 # Boilerplate: ReduxSimpleStarter
 
