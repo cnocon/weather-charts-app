@@ -16,24 +16,30 @@
   text-align: center;
   vertical-align: middle;
   font-weight: 500;
-  width: 26%;
+  width: 25%;
 }
 
-.table thead th:first-child {
-  width: 22%;
+.table tbody th small {
+  text-align: center;
+}
+
+.table tbody th,
+.table tbody th > div {
+  min-width: 180px;
+  min-height: 120px;
+  vertical-align: top;
 }
 
 .table tbody th {
-  vertical-align: middle;
-  text-align: center;
-  width: 22%;
+  width: 25%;
 }
 
 .table tbody td {
   text-align: center;
-  vertical-align: bottom;
-  width: 26%;
-  min-width: 120px;
+  vertical-align: middle;
+  width: 25%;
+  min-width: 180px;
+  min-height: 150px;
 }
 
 form {
@@ -49,7 +55,6 @@ p.more {
   font-size: 0.8rem;
   font-weight: 200;
 }
-
 
 @media screen and (min-width: 700px) {
   .table tbody th,
@@ -67,5 +72,11 @@ p.more {
 
   p.more {
     font-size: 1rem;
+  }
+
+  .table tbody th,
+  .table tbody th > div {
+    min-height: 160px;
+    vertical-align: top;
   }
 }

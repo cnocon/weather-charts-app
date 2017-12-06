@@ -60,6 +60,69 @@ https://www.udemy.com/react-redux/learn/v4/t/lecture/4284608?start=0
 
 ![Redux State diagram](https://www.dropbox.com/s/92ozsxpcgkwbhzy/Screenshot%202017-12-05%2012.48.23.png?raw=1)
 
+---
+ref is a utillity in react that gives you a direct reference to this element w/the ref='' that you can reference anywhere else inside the component via this.refs.map
+`return <div ref="map" />`
+
+```js
+import React, { Component } from 'react';
+
+class GoogleMap extends Component {
+/**
+  * componentDidMount is called after this component is rendered to the screen
+  */
+  componentDidMount() {
+  /**
+    * new google.maps.Map is how we create an embedded google map inside our document
+    * google.maps.map takes a reference to a DOM node (this.refs.map), then
+    * it finds that element on the screen, and renders an embedded map into it
+    */
+    new google.maps.Map(this.refs.map, {
+    /**
+      * Level 12 zoom allows zooming in enough to get good glimpse of city
+      */
+      zoom: 12,
+      center: {
+        lat: this.props.lat,
+        lng: this.props.lon
+      }
+    });
+  }
+  render() {
+    return <div ref="map" />;
+  }
+}
+
+export default GoogleMap;
+```
+
+> ---
+> **es6 syntax**
+> 
+> in es6,
+> ```js
+> const { lon, lat } = cityData.city.coord;
+> ```
+> is equivalent to 
+> ```js
+> const lon = cityData.city.coord.lon;
+> const lat = cityData.city.coord.lat;
+> ```
+> ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Boilerplate: ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
